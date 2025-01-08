@@ -1,0 +1,772 @@
+INFO: Building model...
+[ARGS::dataset_root] './data'
+[ARGS::dataset] 'PUNet'
+[ARGS::changelog] ''
+[ARGS::patches_per_shape_per_epoch] 100
+[ARGS::patch_ratio] 1.2
+[ARGS::resolutions] ['10000_poisson', '30000_poisson', '50000_poisson']
+[ARGS::noise_min] 0.005
+[ARGS::noise_max] 0.02
+[ARGS::train_batch_size] 24
+[ARGS::val_batch_size] 24
+[ARGS::n_gpu] 4
+[ARGS::num_workers] 12
+[ARGS::save_interval] 5
+[ARGS::debug] False
+[ARGS::aug_rotate] True
+[ARGS::loss_type] 'NN'
+[ARGS::sched_patience] 10
+[ARGS::sched_factor] 0.5
+[ARGS::min_lr] 1e-12
+[ARGS::lr] 1e-09
+[ARGS::weight_decay] 0
+[ARGS::seed] 2024
+[ARGS::log_root] './logs'
+[ARGS::device] 'cuda'
+[ARGS::val_noise] 0.015
+[ARGS::patch_size] 1000
+[ARGS::frame_knn] 32
+[ARGS::num_modules] 4
+[ARGS::noise_decay] 4
+DenoiseNet(
+  (feature_nets): ModuleList(
+    (0): FeatureExtraction(
+      (conv1): DynamicEdgeConv()
+      (conv2): DynamicEdgeConv()
+      (conv3): DynamicEdgeConv()
+      (conv4): DynamicEdgeConv()
+      (linear1): Linear(in_features=256, out_features=128, bias=False)
+      (linear2): Linear(in_features=128, out_features=64, bias=True)
+      (linear3): Linear(in_features=64, out_features=3, bias=True)
+    )
+    (1): FeatureExtraction(
+      (conv1): DynamicEdgeConv()
+      (conv2): DynamicEdgeConv()
+      (conv3): DynamicEdgeConv()
+      (conv4): DynamicEdgeConv()
+      (linear1): Linear(in_features=256, out_features=128, bias=False)
+      (linear2): Linear(in_features=128, out_features=64, bias=True)
+      (linear3): Linear(in_features=64, out_features=3, bias=True)
+    )
+    (2): FeatureExtraction(
+      (conv1): DynamicEdgeConv()
+      (conv2): DynamicEdgeConv()
+      (conv3): DynamicEdgeConv()
+      (conv4): DynamicEdgeConv()
+      (linear1): Linear(in_features=256, out_features=128, bias=False)
+      (linear2): Linear(in_features=128, out_features=64, bias=True)
+      (linear3): Linear(in_features=64, out_features=3, bias=True)
+    )
+    (3): FeatureExtraction(
+      (conv1): DynamicEdgeConv()
+      (conv2): DynamicEdgeConv()
+      (conv3): DynamicEdgeConv()
+      (conv4): DynamicEdgeConv()
+      (linear1): Linear(in_features=256, out_features=128, bias=False)
+      (linear2): Linear(in_features=128, out_features=64, bias=True)
+      (linear3): Linear(in_features=64, out_features=3, bias=True)
+    )
+  )
+)
+INFO: Start training...
+INFO: Building model...
+INFO: Building model...
+INFO: Building model...
+[ARGS::dataset_root] './data'
+[ARGS::dataset] 'PUNet'
+[ARGS::changelog] ''
+[ARGS::patches_per_shape_per_epoch] 100
+[ARGS::patch_ratio] 1.2
+[ARGS::resolutions] ['10000_poisson', '30000_poisson', '50000_poisson']
+[ARGS::noise_min] 0.005
+[ARGS::noise_max] 0.02
+[ARGS::train_batch_size] 24
+[ARGS::val_batch_size] 24
+[ARGS::n_gpu] 4
+[ARGS::num_workers] 12
+[ARGS::save_interval] 5
+[ARGS::debug] False
+[ARGS::aug_rotate] True
+[ARGS::loss_type] 'NN'
+[ARGS::sched_patience] 10
+[ARGS::sched_factor] 0.5
+[ARGS::min_lr] 1e-12
+[ARGS::lr] 1e-09
+[ARGS::weight_decay] 0
+[ARGS::seed] 2024
+[ARGS::log_root] './logs'
+[ARGS::device] 'cuda'
+[ARGS::val_noise] 0.015
+[ARGS::patch_size] 1000
+[ARGS::frame_knn] 32
+[ARGS::num_modules] 4
+[ARGS::noise_decay] 4
+DenoiseNet(
+  (feature_nets): ModuleList(
+    (0): FeatureExtraction(
+      (conv1): DynamicEdgeConv()
+      (conv2): DynamicEdgeConv()
+      (conv3): DynamicEdgeConv()
+      (conv4): DynamicEdgeConv()
+      (linear1): Linear(in_features=256, out_features=128, bias=False)
+      (linear2): Linear(in_features=128, out_features=64, bias=True)
+      (linear3): Linear(in_features=64, out_features=3, bias=True)
+    )
+    (1): FeatureExtraction(
+      (conv1): DynamicEdgeConv()
+      (conv2): DynamicEdgeConv()
+      (conv3): DynamicEdgeConv()
+      (conv4): DynamicEdgeConv()
+      (linear1): Linear(in_features=256, out_features=128, bias=False)
+      (linear2): Linear(in_features=128, out_features=64, bias=True)
+      (linear3): Linear(in_features=64, out_features=3, bias=True)
+    )
+    (2): FeatureExtraction(
+      (conv1): DynamicEdgeConv()
+      (conv2): DynamicEdgeConv()
+      (conv3): DynamicEdgeConv()
+      (conv4): DynamicEdgeConv()
+      (linear1): Linear(in_features=256, out_features=128, bias=False)
+      (linear2): Linear(in_features=128, out_features=64, bias=True)
+      (linear3): Linear(in_features=64, out_features=3, bias=True)
+    )
+    (3): FeatureExtraction(
+      (conv1): DynamicEdgeConv()
+      (conv2): DynamicEdgeConv()
+      (conv3): DynamicEdgeConv()
+      (conv4): DynamicEdgeConv()
+      (linear1): Linear(in_features=256, out_features=128, bias=False)
+      (linear2): Linear(in_features=128, out_features=64, bias=True)
+      (linear3): Linear(in_features=64, out_features=3, bias=True)
+    )
+  )
+)
+INFO: Start training...
+[ARGS::dataset_root] './data'
+[ARGS::dataset] 'PUNet'
+[ARGS::changelog] ''
+[ARGS::patches_per_shape_per_epoch] 100
+[ARGS::patch_ratio] 1.2
+[ARGS::resolutions] ['10000_poisson', '30000_poisson', '50000_poisson']
+[ARGS::noise_min] 0.005
+[ARGS::noise_max] 0.02
+[ARGS::train_batch_size] 24
+[ARGS::val_batch_size] 24
+[ARGS::n_gpu] 4
+[ARGS::num_workers] 12
+[ARGS::save_interval] 5
+[ARGS::debug] False
+[ARGS::aug_rotate] True
+[ARGS::loss_type] 'NN'
+[ARGS::sched_patience] 10
+[ARGS::sched_factor] 0.5
+[ARGS::min_lr] 1e-12
+[ARGS::lr] 1e-09
+[ARGS::weight_decay] 0
+[ARGS::seed] 2024
+[ARGS::log_root] './logs'
+[ARGS::device] 'cuda'
+[ARGS::val_noise] 0.015
+[ARGS::patch_size] 1000
+[ARGS::frame_knn] 32
+[ARGS::num_modules] 4
+[ARGS::noise_decay] 4
+DenoiseNet(
+  (feature_nets): ModuleList(
+    (0): FeatureExtraction(
+      (conv1): DynamicEdgeConv()
+      (conv2): DynamicEdgeConv()
+      (conv3): DynamicEdgeConv()
+      (conv4): DynamicEdgeConv()
+      (linear1): Linear(in_features=256, out_features=128, bias=False)
+      (linear2): Linear(in_features=128, out_features=64, bias=True)
+      (linear3): Linear(in_features=64, out_features=3, bias=True)
+    )
+    (1): FeatureExtraction(
+      (conv1): DynamicEdgeConv()
+      (conv2): DynamicEdgeConv()
+      (conv3): DynamicEdgeConv()
+      (conv4): DynamicEdgeConv()
+      (linear1): Linear(in_features=256, out_features=128, bias=False)
+      (linear2): Linear(in_features=128, out_features=64, bias=True)
+      (linear3): Linear(in_features=64, out_features=3, bias=True)
+    )
+    (2): FeatureExtraction(
+      (conv1): DynamicEdgeConv()
+      (conv2): DynamicEdgeConv()
+      (conv3): DynamicEdgeConv()
+      (conv4): DynamicEdgeConv()
+      (linear1): Linear(in_features=256, out_features=128, bias=False)
+      (linear2): Linear(in_features=128, out_features=64, bias=True)
+      (linear3): Linear(in_features=64, out_features=3, bias=True)
+    )
+    (3): FeatureExtraction(
+      (conv1): DynamicEdgeConv()
+      (conv2): DynamicEdgeConv()
+      (conv3): DynamicEdgeConv()
+      (conv4): DynamicEdgeConv()
+      (linear1): Linear(in_features=256, out_features=128, bias=False)
+      (linear2): Linear(in_features=128, out_features=64, bias=True)
+      (linear3): Linear(in_features=64, out_features=3, bias=True)
+    )
+  )
+)
+INFO: Start training...
+[ARGS::dataset_root] './data'
+[ARGS::dataset] 'PUNet'
+[ARGS::changelog] ''
+[ARGS::patches_per_shape_per_epoch] 100
+[ARGS::patch_ratio] 1.2
+[ARGS::resolutions] ['10000_poisson', '30000_poisson', '50000_poisson']
+[ARGS::noise_min] 0.005
+[ARGS::noise_max] 0.02
+[ARGS::train_batch_size] 24
+[ARGS::val_batch_size] 24
+[ARGS::n_gpu] 4
+[ARGS::num_workers] 12
+[ARGS::save_interval] 5
+[ARGS::debug] False
+[ARGS::aug_rotate] True
+[ARGS::loss_type] 'NN'
+[ARGS::sched_patience] 10
+[ARGS::sched_factor] 0.5
+[ARGS::min_lr] 1e-12
+[ARGS::lr] 1e-09
+[ARGS::weight_decay] 0
+[ARGS::seed] 2024
+[ARGS::log_root] './logs'
+[ARGS::device] 'cuda'
+[ARGS::val_noise] 0.015
+[ARGS::patch_size] 1000
+[ARGS::frame_knn] 32
+[ARGS::num_modules] 4
+[ARGS::noise_decay] 4
+DenoiseNet(
+  (feature_nets): ModuleList(
+    (0): FeatureExtraction(
+      (conv1): DynamicEdgeConv()
+      (conv2): DynamicEdgeConv()
+      (conv3): DynamicEdgeConv()
+      (conv4): DynamicEdgeConv()
+      (linear1): Linear(in_features=256, out_features=128, bias=False)
+      (linear2): Linear(in_features=128, out_features=64, bias=True)
+      (linear3): Linear(in_features=64, out_features=3, bias=True)
+    )
+    (1): FeatureExtraction(
+      (conv1): DynamicEdgeConv()
+      (conv2): DynamicEdgeConv()
+      (conv3): DynamicEdgeConv()
+      (conv4): DynamicEdgeConv()
+      (linear1): Linear(in_features=256, out_features=128, bias=False)
+      (linear2): Linear(in_features=128, out_features=64, bias=True)
+      (linear3): Linear(in_features=64, out_features=3, bias=True)
+    )
+    (2): FeatureExtraction(
+      (conv1): DynamicEdgeConv()
+      (conv2): DynamicEdgeConv()
+      (conv3): DynamicEdgeConv()
+      (conv4): DynamicEdgeConv()
+      (linear1): Linear(in_features=256, out_features=128, bias=False)
+      (linear2): Linear(in_features=128, out_features=64, bias=True)
+      (linear3): Linear(in_features=64, out_features=3, bias=True)
+    )
+    (3): FeatureExtraction(
+      (conv1): DynamicEdgeConv()
+      (conv2): DynamicEdgeConv()
+      (conv3): DynamicEdgeConv()
+      (conv4): DynamicEdgeConv()
+      (linear1): Linear(in_features=256, out_features=128, bias=False)
+      (linear2): Linear(in_features=128, out_features=64, bias=True)
+      (linear3): Linear(in_features=64, out_features=3, bias=True)
+    )
+  )
+)
+INFO: Start training...
+INFO: Current epoch training loss: 0.000307
+INFO: Current epoch training loss: 0.000311
+INFO: Current epoch training loss: 0.000313
+INFO: Current epoch training loss: 0.000318
+INFO: Current epoch training loss: 0.000310
+INFO: Current epoch training loss: 0.000307
+INFO: Current epoch training loss: 0.000313
+INFO: Current epoch training loss: 0.000310
+INFO: Current epoch training loss: 0.000311
+INFO: Current epoch training loss: 0.000313
+INFO: Current epoch training loss: 0.000304
+INFO: Current epoch training loss: 0.000308
+INFO: Current epoch training loss: 0.000305
+INFO: Current epoch training loss: 0.000311
+INFO: Current epoch training loss: 0.000311
+INFO: Current epoch training loss: 0.000311
+INFO: Current epoch validation loss: 0.000291
+INFO: Current epoch validation loss: 0.000308
+INFO: Current epoch validation loss: 0.000252
+INFO: Current epoch validation loss: 0.000270
+INFO: Current epoch training loss: 0.000306
+INFO: Current epoch training loss: 0.000315
+INFO: Current epoch training loss: 0.000305
+INFO: Current epoch training loss: 0.000307
+INFO: Current epoch training loss: 0.000311
+INFO: Current epoch training loss: 0.000313
+INFO: Current epoch training loss: 0.000304
+INFO: Current epoch training loss: 0.000300
+INFO: Current epoch training loss: 0.000305
+INFO: Current epoch training loss: 0.000308
+INFO: Current epoch training loss: 0.000308
+INFO: Current epoch training loss: 0.000313
+INFO: Current epoch training loss: 0.000312
+INFO: Current epoch training loss: 0.000307
+INFO: Current epoch training loss: 0.000311
+INFO: Current epoch training loss: 0.000305
+INFO: Current epoch training loss: 0.000310
+INFO: Current epoch training loss: 0.000306
+INFO: Current epoch training loss: 0.000303
+INFO: Current epoch training loss: 0.000310
+INFO: Current epoch validation loss: 0.000300
+INFO: Current epoch validation loss: 0.000289
+INFO: Current epoch validation loss: 0.000269
+INFO: Current epoch validation loss: 0.000249
+INFO: Current epoch training loss: 0.000308
+INFO: Current epoch training loss: 0.000308
+INFO: Current epoch training loss: 0.000315
+INFO: Current epoch training loss: 0.000306
+INFO: Current epoch training loss: 0.000310
+INFO: Current epoch training loss: 0.000307
+INFO: Current epoch training loss: 0.000304
+INFO: Current epoch training loss: 0.000299
+INFO: Current epoch training loss: 0.000305
+INFO: Current epoch training loss: 0.000314
+INFO: Current epoch training loss: 0.000312
+INFO: Current epoch training loss: 0.000306
+INFO: Current epoch training loss: 0.000304
+INFO: Current epoch training loss: 0.000308
+INFO: Current epoch training loss: 0.000309
+INFO: Current epoch training loss: 0.000307
+INFO: Current epoch training loss: 0.000313
+INFO: Current epoch training loss: 0.000306
+INFO: Current epoch training loss: 0.000313
+INFO: Current epoch training loss: 0.000304
+INFO: Current epoch validation loss: 0.000286
+INFO: Current epoch validation loss: 0.000302
+INFO: Current epoch validation loss: 0.000270
+INFO: Current epoch validation loss: 0.000251
+INFO: Current epoch training loss: 0.000306
+INFO: Current epoch training loss: 0.000310
+INFO: Current epoch training loss: 0.000308
+INFO: Current epoch training loss: 0.000311
+INFO: Current epoch training loss: 0.000308
+INFO: Current epoch training loss: 0.000305
+INFO: Current epoch training loss: 0.000312
+INFO: Current epoch training loss: 0.000306
+INFO: Current epoch training loss: 0.000301
+INFO: Current epoch training loss: 0.000319
+INFO: Current epoch training loss: 0.000309
+INFO: Current epoch training loss: 0.000305
+INFO: Current epoch training loss: 0.000309
+INFO: Current epoch training loss: 0.000304
+INFO: Current epoch training loss: 0.000303
+INFO: Current epoch training loss: 0.000316
+INFO: Current epoch training loss: 0.000316
+INFO: Current epoch training loss: 0.000301
+INFO: Current epoch training loss: 0.000313
+INFO: Current epoch training loss: 0.000306
+INFO: Current epoch validation loss: 0.000302
+INFO: Current epoch validation loss: 0.000270
+INFO: Current epoch validation loss: 0.000287
+INFO: Current epoch validation loss: 0.000249
+INFO: Current epoch training loss: 0.000309
+INFO: Current epoch training loss: 0.000318
+INFO: Current epoch training loss: 0.000306
+INFO: Current epoch training loss: 0.000311
+INFO: Current epoch training loss: 0.000308
+INFO: Current epoch training loss: 0.000314
+INFO: Current epoch training loss: 0.000307
+INFO: Current epoch training loss: 0.000309
+INFO: Current epoch training loss: 0.000302
+INFO: Current epoch training loss: 0.000313
+INFO: Current epoch training loss: 0.000306
+INFO: Current epoch training loss: 0.000305
+INFO: Current epoch training loss: 0.000311
+INFO: Current epoch training loss: 0.000309
+INFO: Current epoch training loss: 0.000311
+INFO: Current epoch training loss: 0.000304
+INFO: Current epoch training loss: 0.000301
+INFO: Current epoch training loss: 0.000307
+INFO: Current epoch training loss: 0.000313
+INFO: Current epoch training loss: 0.000301
+INFO: Current epoch validation loss: 0.000298
+INFO: Current epoch validation loss: 0.000287
+INFO: Current epoch validation loss: 0.000268
+INFO: Current epoch validation loss: 0.000248
+INFO: Current epoch training loss: 0.000306
+INFO: Current epoch training loss: 0.000308
+INFO: Current epoch training loss: 0.000309
+INFO: Current epoch training loss: 0.000309
+INFO: Current epoch training loss: 0.000316
+INFO: Current epoch training loss: 0.000308
+INFO: Current epoch training loss: 0.000308
+INFO: Current epoch training loss: 0.000304
+INFO: Current epoch training loss: 0.000318
+INFO: Current epoch training loss: 0.000304
+INFO: Current epoch training loss: 0.000305
+INFO: Current epoch training loss: 0.000314
+INFO: Current epoch training loss: 0.000305
+INFO: Current epoch training loss: 0.000307
+INFO: Current epoch training loss: 0.000312
+INFO: Current epoch training loss: 0.000305
+INFO: Current epoch training loss: 0.000305
+INFO: Current epoch training loss: 0.000304
+INFO: Current epoch training loss: 0.000314
+INFO: Current epoch training loss: 0.000304
+INFO: Current epoch validation loss: 0.000250
+INFO: Current epoch validation loss: 0.000300
+INFO: Current epoch validation loss: 0.000269
+INFO: Current epoch validation loss: 0.000286
+INFO: Current epoch training loss: 0.000309
+INFO: Current epoch training loss: 0.000303
+INFO: Current epoch training loss: 0.000307
+INFO: Current epoch training loss: 0.000307
+INFO: Current epoch training loss: 0.000305
+INFO: Current epoch training loss: 0.000303
+INFO: Current epoch training loss: 0.000310
+INFO: Current epoch training loss: 0.000306
+INFO: Current epoch training loss: 0.000305
+INFO: Current epoch training loss: 0.000305
+INFO: Current epoch training loss: 0.000309
+INFO: Current epoch training loss: 0.000304
+INFO: Current epoch training loss: 0.000305
+INFO: Current epoch training loss: 0.000307
+INFO: Current epoch training loss: 0.000308
+INFO: Current epoch training loss: 0.000307
+INFO: Current epoch training loss: 0.000305
+INFO: Current epoch training loss: 0.000308
+INFO: Current epoch training loss: 0.000311
+INFO: Current epoch training loss: 0.000306
+INFO: Current epoch validation loss: 0.000299
+INFO: Current epoch validation loss: 0.000288
+INFO: Current epoch validation loss: 0.000250
+INFO: Current epoch validation loss: 0.000269
+INFO: Current epoch training loss: 0.000317
+INFO: Current epoch training loss: 0.000304
+INFO: Current epoch training loss: 0.000301
+INFO: Current epoch training loss: 0.000310
+INFO: Current epoch training loss: 0.000309
+INFO: Current epoch training loss: 0.000305
+INFO: Current epoch training loss: 0.000314
+INFO: Current epoch training loss: 0.000301
+INFO: Current epoch training loss: 0.000311
+INFO: Current epoch training loss: 0.000309
+INFO: Current epoch training loss: 0.000309
+INFO: Current epoch training loss: 0.000306
+INFO: Current epoch training loss: 0.000310
+INFO: Current epoch training loss: 0.000304
+INFO: Current epoch training loss: 0.000303
+INFO: Current epoch training loss: 0.000308
+INFO: Current epoch training loss: 0.000310
+INFO: Current epoch training loss: 0.000308
+INFO: Current epoch training loss: 0.000314
+INFO: Current epoch training loss: 0.000305
+INFO: Current epoch validation loss: 0.000287
+INFO: Current epoch validation loss: 0.000270
+INFO: Current epoch validation loss: 0.000252
+INFO: Current epoch validation loss: 0.000298
+INFO: Current epoch training loss: 0.000308
+INFO: Current epoch training loss: 0.000316
+INFO: Current epoch training loss: 0.000307
+INFO: Current epoch training loss: 0.000306
+INFO: Current epoch training loss: 0.000312
+INFO: Current epoch training loss: 0.000306
+INFO: Current epoch training loss: 0.000312
+INFO: Current epoch training loss: 0.000303
+INFO: Current epoch training loss: 0.000306
+INFO: Current epoch training loss: 0.000311
+INFO: Current epoch training loss: 0.000313
+INFO: Current epoch training loss: 0.000307
+INFO: Current epoch training loss: 0.000303
+INFO: Current epoch training loss: 0.000305
+INFO: Current epoch training loss: 0.000310
+INFO: Current epoch training loss: 0.000308
+INFO: Current epoch training loss: 0.000301
+INFO: Current epoch training loss: 0.000306
+INFO: Current epoch training loss: 0.000313
+INFO: Current epoch training loss: 0.000305
+INFO: Current epoch validation loss: 0.000300
+INFO: Current epoch validation loss: 0.000285
+INFO: Current epoch validation loss: 0.000248
+INFO: Current epoch validation loss: 0.000269
+INFO: Current epoch training loss: 0.000309
+INFO: Current epoch training loss: 0.000310
+INFO: Current epoch training loss: 0.000304
+INFO: Current epoch training loss: 0.000310
+INFO: Current epoch training loss: 0.000306
+INFO: Current epoch training loss: 0.000299
+INFO: Current epoch training loss: 0.000312
+INFO: Current epoch training loss: 0.000300
+INFO: Current epoch training loss: 0.000305
+INFO: Current epoch training loss: 0.000313
+INFO: Current epoch training loss: 0.000303
+INFO: Current epoch training loss: 0.000310
+INFO: Current epoch training loss: 0.000299
+INFO: Current epoch training loss: 0.000310
+INFO: Current epoch training loss: 0.000307
+INFO: Current epoch training loss: 0.000311
+INFO: Current epoch training loss: 0.000303
+INFO: Current epoch training loss: 0.000301
+INFO: Current epoch training loss: 0.000306
+INFO: Current epoch training loss: 0.000306
+INFO: Current epoch validation loss: 0.000298
+INFO: Current epoch validation loss: 0.000287
+INFO: Current epoch validation loss: 0.000249
+INFO: Current epoch validation loss: 0.000270
+INFO: Current epoch training loss: 0.000304
+INFO: Current epoch training loss: 0.000307
+INFO: Current epoch training loss: 0.000310
+INFO: Current epoch training loss: 0.000303
+INFO: Current epoch training loss: 0.000303
+INFO: Current epoch training loss: 0.000309
+INFO: Current epoch training loss: 0.000303
+INFO: Current epoch training loss: 0.000314
+INFO: Current epoch training loss: 0.000310
+INFO: Current epoch training loss: 0.000308
+INFO: Current epoch training loss: 0.000306
+INFO: Current epoch training loss: 0.000301
+INFO: Current epoch training loss: 0.000308
+INFO: Current epoch training loss: 0.000307
+INFO: Current epoch training loss: 0.000315
+INFO: Current epoch training loss: 0.000306
+INFO: Current epoch training loss: 0.000315
+INFO: Current epoch training loss: 0.000301
+INFO: Current epoch training loss: 0.000302
+INFO: Current epoch training loss: 0.000311
+INFO: Current epoch validation loss: 0.000298
+INFO: Current epoch validation loss: 0.000286
+INFO: Current epoch validation loss: 0.000248
+INFO: Current epoch validation loss: 0.000271
+INFO: Current epoch training loss: 0.000308
+INFO: Current epoch training loss: 0.000304
+INFO: Current epoch training loss: 0.000305
+INFO: Current epoch training loss: 0.000306
+INFO: Current epoch training loss: 0.000304
+INFO: Current epoch training loss: 0.000301
+INFO: Current epoch training loss: 0.000306
+INFO: Current epoch training loss: 0.000308
+INFO: Current epoch training loss: 0.000305
+INFO: Current epoch training loss: 0.000304
+INFO: Current epoch training loss: 0.000302
+INFO: Current epoch training loss: 0.000297
+INFO: Current epoch training loss: 0.000310
+INFO: Current epoch training loss: 0.000314
+INFO: Current epoch training loss: 0.000303
+INFO: Current epoch training loss: 0.000315
+INFO: Current epoch training loss: 0.000310
+INFO: Current epoch training loss: 0.000304
+INFO: Current epoch training loss: 0.000305
+INFO: Current epoch training loss: 0.000308
+INFO: Current epoch validation loss: 0.000250
+INFO: Current epoch validation loss: 0.000299
+INFO: Current epoch validation loss: 0.000269
+INFO: Current epoch validation loss: 0.000285
+INFO: Current epoch training loss: 0.000302
+INFO: Current epoch training loss: 0.000303
+INFO: Current epoch training loss: 0.000305
+INFO: Current epoch training loss: 0.000302
+INFO: Current epoch training loss: 0.000301
+INFO: Current epoch training loss: 0.000308
+INFO: Current epoch training loss: 0.000308
+INFO: Current epoch training loss: 0.000310
+INFO: Current epoch training loss: 0.000297
+INFO: Current epoch training loss: 0.000305
+INFO: Current epoch training loss: 0.000310
+INFO: Current epoch training loss: 0.000307
+INFO: Current epoch training loss: 0.000311
+INFO: Current epoch training loss: 0.000305
+INFO: Current epoch training loss: 0.000299
+INFO: Current epoch training loss: 0.000307
+INFO: Current epoch training loss: 0.000311
+INFO: Current epoch training loss: 0.000304
+INFO: Current epoch training loss: 0.000303
+INFO: Current epoch training loss: 0.000311
+INFO: Current epoch validation loss: 0.000302
+INFO: Current epoch validation loss: 0.000286
+INFO: Current epoch validation loss: 0.000268
+INFO: Current epoch validation loss: 0.000252
+INFO: Current epoch training loss: 0.000308
+INFO: Current epoch training loss: 0.000310
+INFO: Current epoch training loss: 0.000310
+INFO: Current epoch training loss: 0.000297
+INFO: Current epoch training loss: 0.000308
+INFO: Current epoch training loss: 0.000307
+INFO: Current epoch training loss: 0.000306
+INFO: Current epoch training loss: 0.000309
+INFO: Current epoch training loss: 0.000303
+INFO: Current epoch training loss: 0.000300
+INFO: Current epoch training loss: 0.000297
+INFO: Current epoch training loss: 0.000309
+INFO: Current epoch training loss: 0.000301
+INFO: Current epoch training loss: 0.000312
+INFO: Current epoch training loss: 0.000308
+INFO: Current epoch training loss: 0.000305
+INFO: Current epoch training loss: 0.000304
+INFO: Current epoch training loss: 0.000306
+INFO: Current epoch training loss: 0.000305
+INFO: Current epoch training loss: 0.000298
+INFO: Current epoch validation loss: 0.000300
+INFO: Current epoch validation loss: 0.000288
+INFO: Current epoch validation loss: 0.000269
+INFO: Current epoch validation loss: 0.000249
+INFO: Current epoch training loss: 0.000309
+INFO: Current epoch training loss: 0.000302
+INFO: Current epoch training loss: 0.000308
+INFO: Current epoch training loss: 0.000298
+INFO: Current epoch training loss: 0.000298
+INFO: Current epoch training loss: 0.000309
+INFO: Current epoch training loss: 0.000309
+INFO: Current epoch training loss: 0.000302
+INFO: Current epoch training loss: 0.000312
+INFO: Current epoch training loss: 0.000302
+INFO: Current epoch training loss: 0.000312
+INFO: Current epoch training loss: 0.000303
+INFO: Current epoch training loss: 0.000306
+INFO: Current epoch training loss: 0.000310
+INFO: Current epoch training loss: 0.000318
+INFO: Current epoch training loss: 0.000310
+INFO: Current epoch training loss: 0.000295
+INFO: Current epoch training loss: 0.000300
+INFO: Current epoch training loss: 0.000306
+INFO: Current epoch training loss: 0.000305
+INFO: Current epoch validation loss: 0.000295
+INFO: Current epoch validation loss: 0.000285
+INFO: Current epoch validation loss: 0.000248
+INFO: Current epoch validation loss: 0.000267
+INFO: Current epoch training loss: 0.000312
+INFO: Current epoch training loss: 0.000304
+INFO: Current epoch training loss: 0.000303
+INFO: Current epoch training loss: 0.000304
+INFO: Current epoch training loss: 0.000303
+INFO: Current epoch training loss: 0.000312
+INFO: Current epoch training loss: 0.000308
+INFO: Current epoch training loss: 0.000304
+INFO: Current epoch training loss: 0.000309
+INFO: Current epoch training loss: 0.000309
+INFO: Current epoch training loss: 0.000304
+INFO: Current epoch training loss: 0.000304
+INFO: Current epoch training loss: 0.000309
+INFO: Current epoch training loss: 0.000301
+INFO: Current epoch training loss: 0.000306
+INFO: Current epoch training loss: 0.000299
+INFO: Current epoch training loss: 0.000310
+INFO: Current epoch training loss: 0.000311
+INFO: Current epoch training loss: 0.000308
+INFO: Current epoch training loss: 0.000315
+INFO: Current epoch validation loss: 0.000287
+INFO: Current epoch validation loss: 0.000298
+INFO: Current epoch validation loss: 0.000248
+INFO: Current epoch validation loss: 0.000269
+INFO: Current epoch training loss: 0.000300
+INFO: Current epoch training loss: 0.000308
+INFO: Current epoch training loss: 0.000312
+INFO: Current epoch training loss: 0.000301
+INFO: Current epoch training loss: 0.000311
+INFO: Current epoch training loss: 0.000309
+INFO: Current epoch training loss: 0.000308
+INFO: Current epoch training loss: 0.000306
+INFO: Current epoch training loss: 0.000306
+INFO: Current epoch training loss: 0.000303
+INFO: Current epoch training loss: 0.000310
+INFO: Current epoch training loss: 0.000304
+INFO: Current epoch training loss: 0.000300
+INFO: Current epoch training loss: 0.000305
+INFO: Current epoch training loss: 0.000306
+INFO: Current epoch training loss: 0.000309
+INFO: Current epoch training loss: 0.000290
+INFO: Current epoch training loss: 0.000310
+INFO: Current epoch training loss: 0.000306
+INFO: Current epoch training loss: 0.000307
+INFO: Current epoch validation loss: 0.000297
+INFO: Current epoch validation loss: 0.000284
+INFO: Current epoch validation loss: 0.000249
+INFO: Current epoch validation loss: 0.000268
+INFO: Current epoch training loss: 0.000302
+INFO: Current epoch training loss: 0.000305
+INFO: Current epoch training loss: 0.000308
+INFO: Current epoch training loss: 0.000300
+INFO: Current epoch training loss: 0.000307
+INFO: Current epoch training loss: 0.000305
+INFO: Current epoch training loss: 0.000301
+INFO: Current epoch training loss: 0.000296
+INFO: Current epoch training loss: 0.000300
+INFO: Current epoch training loss: 0.000311
+INFO: Current epoch training loss: 0.000306
+INFO: Current epoch training loss: 0.000304
+INFO: Current epoch training loss: 0.000309
+INFO: Current epoch training loss: 0.000304
+INFO: Current epoch training loss: 0.000304
+INFO: Current epoch training loss: 0.000310
+INFO: Current epoch training loss: 0.000300
+INFO: Current epoch training loss: 0.000305
+INFO: Current epoch training loss: 0.000304
+INFO: Current epoch training loss: 0.000306
+INFO: Current epoch validation loss: 0.000285
+INFO: Current epoch validation loss: 0.000298
+INFO: Current epoch validation loss: 0.000250
+INFO: Current epoch validation loss: 0.000268
+INFO: Current epoch training loss: 0.000302
+INFO: Current epoch training loss: 0.000301
+INFO: Current epoch training loss: 0.000309
+INFO: Current epoch training loss: 0.000298
+INFO: Current epoch training loss: 0.000305
+INFO: Current epoch training loss: 0.000303
+INFO: Current epoch training loss: 0.000304
+INFO: Current epoch training loss: 0.000309
+INFO: Current epoch training loss: 0.000312
+INFO: Current epoch training loss: 0.000303
+INFO: Current epoch training loss: 0.000306
+INFO: Current epoch training loss: 0.000304
+INFO: Current epoch training loss: 0.000309
+INFO: Current epoch training loss: 0.000299
+INFO: Current epoch training loss: 0.000306
+INFO: Current epoch training loss: 0.000312
+INFO: Current epoch training loss: 0.000302
+INFO: Current epoch training loss: 0.000313
+INFO: Current epoch training loss: 0.000308
+INFO: Current epoch training loss: 0.000301
+INFO: Current epoch validation loss: 0.000302
+INFO: Current epoch validation loss: 0.000268
+INFO: Current epoch validation loss: 0.000286
+INFO: Current epoch validation loss: 0.000250
+INFO: Current epoch training loss: 0.000303
+INFO: Current epoch training loss: 0.000303
+INFO: Current epoch training loss: 0.000311
+INFO: Current epoch training loss: 0.000313
+INFO: Current epoch training loss: 0.000304
+INFO: Current epoch training loss: 0.000309
+INFO: Current epoch training loss: 0.000306
+INFO: Current epoch training loss: 0.000306
+INFO: Current epoch training loss: 0.000305
+INFO: Current epoch training loss: 0.000302
+INFO: Current epoch training loss: 0.000305
+INFO: Current epoch training loss: 0.000305
+INFO: Current epoch training loss: 0.000301
+INFO: Current epoch training loss: 0.000308
+INFO: Current epoch training loss: 0.000298
+INFO: Current epoch training loss: 0.000304
+INFO: Current epoch training loss: 0.000306
+INFO: Current epoch training loss: 0.000303
+INFO: Current epoch training loss: 0.000304
+INFO: Current epoch training loss: 0.000306
+INFO: Current epoch validation loss: 0.000296
+INFO: Current epoch validation loss: 0.000285
+INFO: Current epoch validation loss: 0.000249
+INFO: Current epoch validation loss: 0.000271
+INFO: Current epoch training loss: 0.000307
+INFO: Current epoch training loss: 0.000301
+INFO: Current epoch training loss: 0.000305
+INFO: Current epoch training loss: 0.000309
+INFO: Current epoch training loss: 0.000302
+INFO: Current epoch training loss: 0.000307
+INFO: Current epoch training loss: 0.000304
+INFO: Current epoch training loss: 0.000302
+INFO: Current epoch training loss: 0.000307
+INFO: Current epoch training loss: 0.000302
+INFO: Current epoch training loss: 0.000308
+INFO: Current epoch training loss: 0.000306

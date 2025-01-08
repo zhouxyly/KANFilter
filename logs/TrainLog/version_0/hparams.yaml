@@ -1,0 +1,33 @@
+args: !!python/object:argparse.Namespace
+  aug_rotate: true
+  changelog: ''
+  dataset: PUNet
+  dataset_root: ./data
+  debug: false
+  device: cuda
+  frame_knn: 32
+  log_root: ./logs
+  loss_type: NN
+  lr: 1.0e-09
+  min_lr: 1.0e-12
+  n_gpu: 4
+  noise_decay: 4
+  noise_max: 0.02
+  noise_min: 0.005
+  num_modules: 4
+  num_workers: 12
+  patch_ratio: 1.2
+  patch_size: 1000
+  patches_per_shape_per_epoch: 100
+  resolutions:
+  - 10000_poisson
+  - 30000_poisson
+  - 50000_poisson
+  save_interval: 5
+  sched_factor: 0.5
+  sched_patience: 10
+  seed: 2024
+  train_batch_size: 24
+  val_batch_size: 24
+  val_noise: 0.015
+  weight_decay: 0
