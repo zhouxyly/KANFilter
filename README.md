@@ -57,6 +57,9 @@ Please find tunable parameters in the script.
 
 ## Citation
 
+Our code is partially based on ``Score-Based Point Cloud Denoising`` by Shitong Luo and Wei Hu. Kudos to them for their excellent implementation and resources. Please check their GitHub repo [here](https://github.com/luost26/score-denoise).
+
+
 ```
 Be presented soon
 ```
