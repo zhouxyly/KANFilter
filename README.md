@@ -52,7 +52,7 @@ python test.py
 ```bash
 python train.py --n_gpu=4 --save_interval=5
 ```
-
+For faster training, we use a SLURM cluster with 4 Hygon_Z100 GPUs and a batch size of 24. Please update your respective config settings according to your resources.
 Please find tunable parameters in the script.
 
 ## Citation
